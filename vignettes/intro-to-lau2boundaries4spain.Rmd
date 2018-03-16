@@ -124,7 +124,7 @@ fusion_2016_df <- fusion_2016 %>% st_set_geometry(NULL) #- le quitas la geometri
 
 El sistema de referencia de los datos del paquete es ETRS89 sin proyección. Si queremos cambiar de sistema de referencia, por ejemplo a LAEA, hacemos:
  
-```{r, evla = FALSE}
+```{r, eval = FALSE, message = FALSE, warning = FALSE}
 # EPSG Projection 3035 - ETRS89 / ETRS-LAEA 
 # Proj4js.defs["EPSG:3035"] = "+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs"
 library(tidyverse)

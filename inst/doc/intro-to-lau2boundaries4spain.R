@@ -54,12 +54,12 @@ knitr::opts_chunk$set(
 #  fusion_2016 <- full_join(lindes_2016, pob_2016)
 #  fusion_2016_df <- fusion_2016 %>% st_set_geometry(NULL) #- le quitas la geometria para verlo mejor
 
-## ---- evla = FALSE-------------------------------------------------------
-# EPSG Projection 3035 - ETRS89 / ETRS-LAEA 
-# Proj4js.defs["EPSG:3035"] = "+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs"
-library(tidyverse)
-library(sf)
-library(LAU2boundaries4spain)
-Provincias_proj <- st_transform(Provincias, crs = 3035) 
-plot(Provincias_proj, max.plot = 1)
+## ---- eval = FALSE, message = FALSE, warning = FALSE---------------------
+#  # EPSG Projection 3035 - ETRS89 / ETRS-LAEA
+#  # Proj4js.defs["EPSG:3035"] = "+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs"
+#  library(tidyverse)
+#  library(sf)
+#  library(LAU2boundaries4spain)
+#  Provincias_proj <- st_transform(Provincias, crs = 3035)
+#  plot(Provincias_proj, max.plot = 1)
 

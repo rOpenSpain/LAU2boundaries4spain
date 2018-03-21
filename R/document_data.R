@@ -392,3 +392,144 @@
 
 
 
+
+#' LINDES-2006 del IGN para los municipios (LAU2-SPAIN)
+#'
+#' Poligonos/geometrias/shapes municipales (LAU2-SPAIN). Sacados del IGN
+#' contiene 8.194 filas (8.110 municipios + 84 condominios)
+#'
+#' @source \url{http://centrodedescargas.cnig.es/CentroDescargas/index.jsp}
+#'
+#' @format A sf-data frame con  8.194 filas y 7 variables
+#' \itemize{
+#'   \item INECodMuni: Codigo INE para el municipio (5 digitos)
+#'   \item NombreMuni: Nombre del municipio (o condominio)
+#'   \item INECodProv: Codigo provincial
+#'   \item NombreProv: Nombre de la provincia
+#'   \item INECodCCAA: Codigo de la C.A.
+#'   \item NombreCCAA: Nombre de la C.A.
+#'   \item geometry: Lindes de la provincia
+#'   }
+#'
+#' @examples
+#' \dontrun{
+#'  municipios_2006 <- municipios_2006
+#' }
+#'
+"municipios_2006"
+
+
+
+
+#' LINDES-2005 del IGN para los municipios (LAU2-SPAIN)
+#'
+#' Poligonos/geometrias/shapes municipales (LAU2-SPAIN). Sacados del IGN
+#' contiene 8.193 filas (8.109 municipios + 84 condominios)
+#'
+#' @source \url{http://centrodedescargas.cnig.es/CentroDescargas/index.jsp}
+#'
+#' @format A sf-data frame con  8.193 filas y 7 variables
+#' \itemize{
+#'   \item INECodMuni: Codigo INE para el municipio (5 digitos)
+#'   \item NombreMuni: Nombre del municipio (o condominio)
+#'   \item INECodProv: Codigo provincial
+#'   \item NombreProv: Nombre de la provincia
+#'   \item INECodCCAA: Codigo de la C.A.
+#'   \item NombreCCAA: Nombre de la C.A.
+#'   \item geometry: Lindes de la provincia
+#'   }
+#'
+#' @examples
+#' \dontrun{
+#'  municipios_2005 <- municipios_2005
+#' }
+#'
+"municipios_2005"
+
+
+
+
+#' LINDES-2004 del IGN para los municipios (LAU2-SPAIN)
+#'
+#' Poligonos/geometrias/shapes municipales (LAU2-SPAIN). Sacados del IGN
+#' contiene 8.193 filas (8.109 municipios + 84 condominios)
+#'
+#' @source \url{http://centrodedescargas.cnig.es/CentroDescargas/index.jsp}
+#'
+#' @format A sf-data frame con  8.193 filas y 7 variables
+#' \itemize{
+#'   \item INECodMuni: Codigo INE para el municipio (5 digitos)
+#'   \item NombreMuni: Nombre del municipio (o condominio)
+#'   \item INECodProv: Codigo provincial
+#'   \item NombreProv: Nombre de la provincia
+#'   \item INECodCCAA: Codigo de la C.A.
+#'   \item NombreCCAA: Nombre de la C.A.
+#'   \item geometry: Lindes de la provincia
+#'   }
+#'
+#' @examples
+#' \dontrun{
+#'  municipios_2004 <- municipios_2004
+#' }
+#'
+"municipios_2004"
+
+
+
+
+
+
+#' LINDES-2003 del IGN para los municipios (LAU2-SPAIN)
+#'
+#' Poligonos/geometrias/shapes municipales (LAU2-SPAIN). Sacados del IGN
+#' contiene 8.192 filas (8.108 municipios + 84 condominios)
+#'
+#' @source \url{http://centrodedescargas.cnig.es/CentroDescargas/index.jsp}
+#'
+#' @format A sf-data frame con  8.192 filas y 7 variables
+#' \itemize{
+#'   \item INECodMuni: Codigo INE para el municipio (5 digitos)
+#'   \item NombreMuni: Nombre del municipio (o condominio)
+#'   \item INECodProv: Codigo provincial
+#'   \item NombreProv: Nombre de la provincia
+#'   \item INECodCCAA: Codigo de la C.A.
+#'   \item NombreCCAA: Nombre de la C.A.
+#'   \item geometry: Lindes de la provincia
+#'   }
+#'
+#' @examples
+#' \dontrun{
+#'  municipios_2003 <- municipios_2003
+#' }
+#'
+"municipios_2003"
+
+
+
+
+
+#' LINDES-2002 del IGN para los municipios (LAU2-SPAIN)
+#'
+#' Poligonos/geometrias/shapes municipales (LAU2-SPAIN). Sacados del IGN
+#' contiene 8.192 filas (8.108 municipios + 84 condominios)
+#'
+#' @source \url{http://centrodedescargas.cnig.es/CentroDescargas/index.jsp}
+#'
+#' @format A sf-data frame con  8.192 filas y 7 variables
+#' \itemize{
+#'   \item INECodMuni: Codigo INE para el municipio (5 digitos)
+#'   \item NombreMuni: Nombre del municipio (o condominio)
+#'   \item INECodProv: Codigo provincial
+#'   \item NombreProv: Nombre de la provincia
+#'   \item INECodCCAA: Codigo de la C.A.
+#'   \item NombreCCAA: Nombre de la C.A.
+#'   \item geometry: Lindes de la provincia
+#'   }
+#'
+#' @examples
+#' \dontrun{
+#'  municipios_2002 <- municipios_2002
+#' }
+#'
+"municipios_2002"
+

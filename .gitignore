@@ -1,7 +1,11 @@
 .Rhistory
 .RData
 .Rproj.user
-data-raw/
+data-raw/Base2011/
+data-raw/Base2013/
+data-raw/Base2016/
+data-raw/_script.R
+
 
 
 

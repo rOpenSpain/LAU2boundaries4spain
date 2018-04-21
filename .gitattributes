@@ -1,0 +1,3 @@
+# Para que cataloge el repo como R y no como html
+* linguist-vendored
+*.R linguist-vendored = FALSE

@@ -138,7 +138,9 @@ p1 + p2
 
 <img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
-Si queremos situar a Canarias cerca de España:
+  - Si queremos situar a Canarias cerca de España:
+
+<!-- end list -->
 
 ``` r
 library(LAU2boundaries4spain)

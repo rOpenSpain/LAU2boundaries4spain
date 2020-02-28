@@ -3,11 +3,11 @@
 
 # LAU2boundaries4spain <img src="man/figures/hex-sticker.png" align="right" width="200" height="225" />
 
-El objetivo de este repo es facilitar la realización de mapas a nivel
-municipal para España. Para ello se ofrecen las geometrías o contornos
-municipales españoles para los años 2002 a 2020. ¿Es necesaria esta
-información? Evidentemente pensamos que sí. En España el encargado de
-ofrecer está información es el [Instituto Geográfico
+El objetivo de este repositorio es facilitar la realización de mapas a
+nivel municipal para España. Para ello se ofrecen las geometrías o
+contornos municipales españoles para los años 2002 a 2020. ¿Es necesaria
+esta información? Evidentemente pensamos que sí. En España el encargado
+de ofrecer está información es el [Instituto Geográfico
 Nacional](http://www.ign.es/web/ign/portal) (IGN), **PERO** el IGN no
 guarda un registro históricos de las lineas límites municipales. Solo
 ofrece la información más actual. Por lo tanto, si se quisiera

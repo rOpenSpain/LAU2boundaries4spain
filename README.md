@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# LAU2boundaries4spain <img src="hex-sticker.png" align="right" width="200" height="225" />
+# LAU2boundaries4spain <img src="man/figures/hex-sticker.png" align="right" width="200" height="225" />
 
 El objetivo de este repo es facilitar la realización de mapas a nivel
 municipal para España. Para ello se ofrecen las geometrías o contornos
@@ -9,16 +9,19 @@ municipales españoles para los años 2002 a 2020. ¿Es necesaria esta
 información? Evidentemente pensamos que sí. En España el encargado de
 ofrecer está información es el [Instituto Geográfico
 Nacional](http://www.ign.es/web/ign/portal) (IGN), **PERO** el IGN no
-guarda un registro históricos de las lineas límites municipales; solo
-ofrece la información más actual. Por lo tanto, si se quiere representar
-gráficamente, por ejemplo la población municipal en el año 2010, los
-contornos ofrecidos por el IGN no cuadrarían con la información
-estadistica del INE referida a 2010. La razón es que la relación de
-municipios puede cambiar con el tiempo; por ejemplo, [en el año 2018 se
-crearon en España 7 nuevos
-municipios](https://www.ine.es/daco/daco42/codmun/codmun19/19codmunmod.htm)
+guarda un registro históricos de las lineas límites municipales. Solo
+ofrece la información más actual. Por lo tanto, si se quisiera
+representar gráficamente, por ejemplo, la población municipal en el año
+2010, ocurriría que los contornos ofrecidos por el IGN no cuadrarían con
+la información estadística del INE referida a 2010. La razón es que la
+relación de municipios puede cambiar con el tiempo; por ejemplo, [en el
+año 2018 se crearon en España 7 nuevos
+municipios](https://www.ine.es/daco/daco42/codmun/codmun19/19codmunmod.htm),
 entre ellos El Palmar de Troya, que surge como una segregación de
 Utrera.
+
+La página web del paquete `LAU2boundaries4spain` puede visitarse
+[aquí](https://perezp44.github.io/LAU2boundaries4spain/).
 
 Como el objetivo último de este repositorio es facilitar la
 representación gráfica de información estadística a nivel municipal, se
@@ -105,7 +108,7 @@ plot(Provincias, max.plot = 1)
 
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
-  - Municipios de Teruel en 2002 y 2020
+  - Municipios de Teruel en 2017
 
 <!-- end list -->
 

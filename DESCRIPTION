@@ -18,8 +18,8 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.0.2
 Depends: R (>= 2.10)
 Suggests: 
-    knitr,
-    rmarkdown
+  knitr, 
+  rmarkdown
 VignetteBuilder: knitr
 URL: https://github.com/perezp44/LAU2boundaries4spain
 BugReports: https://github.com/perezp44/LAU2boundaries4spain/issues

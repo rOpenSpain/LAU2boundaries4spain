@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# LAU2boundaries4spain
+# LAU2boundaries4spain <img src="hex-sticker.png" align="right" />
 
 El objetivo de este repositorio es ofrecer los contornos de los términos
 municipales españoles ajustados a los municipios existentes a 1 de enero

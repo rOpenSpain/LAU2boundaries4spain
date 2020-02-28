@@ -15,7 +15,8 @@ knitr::opts_chunk$set(
 )
 ```
 
-# LAU2boundaries4spain
+# LAU2boundaries4spain <img src="hex-sticker.png" align="right" />
+
 
 El objetivo de este repositorio es ofrecer los contornos de los términos municipales españoles ajustados a los municipios existentes a 1 de enero de cada año desde 2002, de forma que cuadren exactamente con el Padrón de dicho año. Los contornos a fecha de 1 de enero de 2002 son consistentes con los existentes en el censo de 2001, con fecha de referencia 1 de noviembre de dicho año. 
 

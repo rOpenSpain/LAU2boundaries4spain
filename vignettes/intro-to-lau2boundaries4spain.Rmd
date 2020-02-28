@@ -1,4 +1,4 @@
----
+  ---
 title: "Intro to LAU2boundaries4spain"
 author: "Francisco Goerlich & Pedro J. Perez"
 date: "`r Sys.Date()`"
@@ -32,7 +32,7 @@ El paquete proporciona:
 
 -   un fichero con los lindes de las CC.AA (`CCAA`)
 -   un fichero con los lindes provinciales (`Provincias`)
--   un fichero con los lindes municipales para cada año del periodo 2002-2018 (por ejemplo `municipios_2018`)
+-   un fichero con los lindes municipales para cada año del periodo 2002-2020 (por ejemplo `municipios_2018`)
 
 Los ficheros se ofrecen en formato `spatial-df` del paquete [`sf`](https://cran.r-project.org/web/packages/sf/index.html)
 
@@ -121,3 +121,4 @@ library(LAU2boundaries4spain)
 Provincias_proj <- st_transform(Provincias, crs = 3035) 
 plot(Provincias_proj, max.plot = 1)
 ```
+  

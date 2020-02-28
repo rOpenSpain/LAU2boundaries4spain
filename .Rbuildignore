@@ -3,3 +3,5 @@
 ^README\.Rmd$
 ^data-raw$
 ^_script\.R$
+^doc$
+^Meta$

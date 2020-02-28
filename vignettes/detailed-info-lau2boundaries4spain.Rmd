@@ -1,4 +1,4 @@
----
+  ---
 title: "Detailed info for LAU2boundaries4spain"
 author: "Francisco Goerlich & Pedro J. Perez"
 date: "`r Sys.Date()`"
@@ -34,30 +34,30 @@ El procedimiento por el cual organiza y elabora la información disponible es el
 
 Dado el carácter continuo de la información proporcionada por el CNIG los contornos históricos se reconstruyeron a partir de diversas descargas de la Base de Datos de Líneas de Límite del [Centro de Descargas](http://centrodedescargas.cnig.es/CentroDescargas/index.jsp)[^1], la recopilación de las alteraciones municipales desde 2002[^2] y diversas operaciones simples en el contexto de los Sistemas de Información Geográfica (SIG), como la generalización de polígonos, el combinado o fusionado de capas y la edición de ciertos lindes.
 
-El proceso implica además ciertas manipulaciones para ofrecer capas homogéneas para el periodo 2001 a 2018.
+El proceso implica además ciertas manipulaciones para ofrecer capas homogéneas para el periodo 2001 a 2020.
 
 - Canarias suele distribuirse, aunque no siempre, como una capa separada en sistema de referencia geodésico WGS84, por lo que hubo que transformarlo de sistema de referencia y fusionarlo con el fichero de la península y Baleares[^3].
 
-- Las capas de lindes municipales incluyen los polígonos que no pertenecen a municipios, los llamados condominios, cuya codificación y nomenclatura ha cambiado considerablemente a lo largo del tiempo. Estos se han homogeneizado de acuerdo con la última práctica del IGN, y algunos de ellos se han editado para mantener la homogeneidad en el tiempo. No es seguro que esta codificación se mantenga en el tiempo, dado lo peculiar de estos territorios[^4].
+- Las capas de lindes municipales incluyen los polígonos que no pertenecen a municipios, los llamados condominios, cuya codificación y nomenclatura ha cambiado considerablemente a lo largo del tiempo. Estos se han homogeneizado de acuerdo con la última práctica del IGN.[^4] No es seguro que esta codificación se mantenga en el tiempo, dado lo peculiar de estos territorios[^5].
 
 - Se extrajeron, en algunos casos, errores del propio IGN en la base de datos descargada, como alguna duplicidad, polígonos multiparte con código único, o códigos intercambiados en la tabla de atributos.
 
 - Finalmente, y dado que hasta fechas muy recientes, el IGN no ofrecía polígono para el municipio de Fago, 22106, solo un polígono para dos municipios, Fago, 22106, y Ansó, 22028, por no existir acta de deslinde entre ambos municipios en el Registro Central de Cartografía, hubo que recuperar y editar el polígono de este municipio a partir de bases de datos anteriores. Más recientemente el IGN si incluye a dicho municipio en la Base de Datos de Líneas de Límite, siendo consistente con el recuperado de bases anteriores.
 
-Finalmente, tras estos procesos, se obtuvieron ficheros de contornos municipales, y un registro por recinto --municipio o condominio-- en la tabla de atributos. Los condominios son 84, y los municipios los existentes a fecha de 1 de enero de cada año.
+Finalmente, tras estos procesos, se obtuvieron ficheros de contornos municipales, y un registro por recinto --municipio o condominio-- en la tabla de atributos. Los condominios son 84 hasta 2018 y 81 para 2019 y 2020, y los municipios los existentes a fecha de 1 de enero de cada año.
 
 ## ¿Qué información se ofrece?
 
 La información se ofrece en el formato del paquete [`sf`](https://cran.r-project.org/web/packages/sf/index.html) de _R_ y sistema de referencia geodésico europeo, ETRS89 en coordenadas geográficas, es decir sin proyección.
 
-Tal y como se indica abajo se ofrece un fichero de polígonos municipales por año, y para Provincias y Comunidades Autónomas (CCAA) solo uno, el correspondiente a la descarga más reciente[^5]. Si lo que se desea es disponer de una capa* de Provincias o CCAA que sea plenamente consistente con los municipios de un año concreto para hacer cálculos geográficos se recomienda que dicha layer sea obtenida por generalización del fichero de municipios correspondiente. La razón es que entre descargas se pueden haber producido alteraciones en los lindes de provincia, CCAA, frontera o de costa, por ejemplo, aunque solo sea por redefinición geométrica. De esta forma se asegura que la información de Provincias y Comunidades Autónomas es totalmente compatible con la de los ficheros de municipios de esa año.
+Tal y como se indica abajo se ofrece un fichero de polígonos municipales por año, y para Provincias y Comunidades Autónomas (CCAA) solo uno, el correspondiente a la descarga más reciente[^6]. Si lo que se desea es disponer de una capa de Provincias o CCAA que sea plenamente consistente con los municipios de un año concreto para hacer cálculos geográficos se recomienda que dicha layer sea obtenida por generalización del fichero de municipios correspondiente. La razón es que entre descargas se suelen producir alteraciones en los lindes de provincia, CCAA, frontera o de costa, por ejemplo, aunque solo sea por redefinición geométrica. De esta forma se asegura que la información de Provincias y Comunidades Autónomas es totalmente compatible con la de los ficheros de municipios de ese año.
 
 
 ## Información finalmente ofrecida y decisiones tomadas.
 
 * Sistema de referencia geodésico: ETRS89 en coordenadas geográficas, sin proyección.
 
-* Contornos municipales para los años 2002-2018 
+* Contornos municipales para los años 2002-2020 
 
 * Contornos municipales para provincias y otra para CCAA (procedente de la descarga más reciente).
 
@@ -102,8 +102,10 @@ Tal y como se indica abajo se ofrece un fichero de polígonos municipales por a�
 
 [^3]: Para una introducción a los sistemas de referencia geodésicos para no especialistas puede verse el apéndice A.3 de Goerlich y Cantarino (2012).
 
-[^4]: Sobre los condominios véase el apéndice de Goerlich, Ruiz, Chorén y Albert (2015).
+[^4]: Así por ejemplo, en la última actualización desaparecieron 3 condominios que fueron absorbidos por dos municipios. Se recomienda, en cualquier caso la consulta de la tabla de Condominios del Nomneclator de Municipios y Entidades de Población del IGN.
 
-[^5]: Dichas capas se obtuvieron por generalización de la capar de contornos municipales, y no se tomaron directamente de la Base de Datos de Líneas de Límite del CNIG.
+[^5]: Sobre los condominios véase el apéndice de Goerlich, Ruiz, Chorén y Albert (2015).
+
+[^6]: Dichas capas se obtuvieron por generalización de la capa de contornos municipales, y no se tomaron directamente de la Base de Datos de Líneas de Límite del CNIG.
 
 

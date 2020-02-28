@@ -1,6 +1,6 @@
 Package: LAU2boundaries4spain
 Type: Package
-Title: LAU2boundaries4spain provides LAU2 (municipalities) data geometries for Spain for 2001-2018
+Title: LAU2boundaries4spain provides LAU2 (municipalities) data geometries for Spain for 2002-2020
 Version: 0.1.0
 Authors@R: c(
     person("Francisco", "Goerlich", email = "francisco.j.goerlich@uv.es", role = c("aut", "cre")),
@@ -10,12 +10,12 @@ Author: Francisco Goerlich [aut, cre],
   Pedro J. Perez [aut, cre]  
 Maintainer: Pedro J. Perez <pedro.j.perez@uv.es>
 Description: The spanishLAU2rboundaries package provides LAU2 (municipalities) data geometries for Spain. We provide a file for each year
-  for the period 2001-2018. Each year has a rda file in sf format.
+  for the period 2002-2020. Each year has a rda file in sf format.
 License: CC-BY 4.0 + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.0.1
+RoxygenNote: 7.0.2
 Depends: R (>= 2.10)
 Suggests: 
     knitr,

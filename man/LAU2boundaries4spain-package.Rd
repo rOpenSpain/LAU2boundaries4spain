@@ -4,10 +4,10 @@
 \name{LAU2boundaries4spain-package}
 \alias{LAU2boundaries4spain}
 \alias{LAU2boundaries4spain-package}
-\title{LAU2boundaries4spain: LAU2boundaries4spain provides LAU2 (municipalities) data geometries for Spain for 2001-2018}
+\title{LAU2boundaries4spain: LAU2boundaries4spain provides LAU2 (municipalities) data geometries for Spain for 2002-2020}
 \description{
 The spanishLAU2rboundaries package provides LAU2 (municipalities) data geometries for Spain. We provide a file for each year
-for the period 2001-2018. Each year has a rda file in sf format.
+  for the period 2002-2020. Each year has a rda file in sf format.
 }
 \seealso{
 Useful links:

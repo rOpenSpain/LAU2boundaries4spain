@@ -1,4 +1,4 @@
-#---- This file documents IGN datasets for spanish LAU2 boundaries
+  #---- This file documents IGN datasets for spanish LAU2 boundaries
 
 
 #' LINDES del IGN para las CC.AA. (SPAIN)
@@ -48,6 +48,67 @@
 
 
 
+#' LINDES-2020 del IGN para los municipios (LAU2-SPAIN)
+#'
+#' Poligonos/geometrias/shapes municipales (LAU2-SPAIN). Sacados del IGN
+#' contiene 8.212 filas (8.131 municipios + 81 condominios)
+#'
+#' @source \url{http://centrodedescargas.cnig.es/CentroDescargas/index.jsp}
+#'
+#' @format A sf-data frame con  8.212 filas y 7 variables
+#' \itemize{
+#'   \item INECodMuni: Codigo INE para el municipio (5 digitos)
+#'   \item NombreMuni: Nombre del municipio (o condominio)
+#'   \item INECodProv: Codigo provincial
+#'   \item NombreProv: Nombre de la provincia
+#'   \item INECodCCAA: Codigo de la C.A.
+#'   \item NombreCCAA: Nombre de la C.A.
+#'   \item geometry: Lindes municipales
+#'   }
+#'
+#' @examples
+#' \dontrun{
+#'  municipios_2020 <- municipios_2020
+#' }
+#'
+"municipios_2020"
+
+
+
+
+
+
+
+
+
+#' LINDES-2019 del IGN para los municipios (LAU2-SPAIN)
+#'
+#' Poligonos/geometrias/shapes municipales (LAU2-SPAIN). Sacados del IGN
+#' contiene 8.212 filas (8.131 municipios + 81 condominios)
+#'
+#' @source \url{http://centrodedescargas.cnig.es/CentroDescargas/index.jsp}
+#'
+#' @format A sf-data frame con  8.212 filas y 7 variables
+#' \itemize{
+#'   \item INECodMuni: Codigo INE para el municipio (5 digitos)
+#'   \item NombreMuni: Nombre del municipio (o condominio)
+#'   \item INECodProv: Codigo provincial
+#'   \item NombreProv: Nombre de la provincia
+#'   \item INECodCCAA: Codigo de la C.A.
+#'   \item NombreCCAA: Nombre de la C.A.
+#'   \item geometry: Lindes municipales
+#'   }
+#'
+#' @examples
+#' \dontrun{
+#'  municipios_2019 <- municipios_2019
+#' }
+#'
+"municipios_2019"
+
+
+
+
 
 #' LINDES-2018 del IGN para los municipios (LAU2-SPAIN)
 #'
@@ -64,7 +125,7 @@
 #'   \item NombreProv: Nombre de la provincia
 #'   \item INECodCCAA: Codigo de la C.A.
 #'   \item NombreCCAA: Nombre de la C.A.
-#'   \item geometry: Lindes de la provincia
+#'   \item geometry: Lindes municipales
 #'   }
 #'
 #' @examples
@@ -93,7 +154,7 @@
 #'   \item NombreProv: Nombre de la provincia
 #'   \item INECodCCAA: Codigo de la C.A.
 #'   \item NombreCCAA: Nombre de la C.A.
-#'   \item geometry: Lindes de la provincia
+#'   \item geometry: Lindes municipales
 #'   }
 #'
 #' @examples
@@ -123,7 +184,7 @@
 #'   \item NombreProv: Nombre de la provincia
 #'   \item INECodCCAA: Codigo de la C.A.
 #'   \item NombreCCAA: Nombre de la C.A.
-#'   \item geometry: Lindes de la provincia
+#'   \item geometry: Lindes municipales
 #'   }
 #'
 #' @examples
@@ -153,7 +214,7 @@
 #'   \item NombreProv: Nombre de la provincia
 #'   \item INECodCCAA: Codigo de la C.A.
 #'   \item NombreCCAA: Nombre de la C.A.
-#'   \item geometry: Lindes de la provincia
+#'   \item geometry: Lindes municipales
 #'   }
 #'
 #' @examples
@@ -183,7 +244,7 @@
 #'   \item NombreProv: Nombre de la provincia
 #'   \item INECodCCAA: Codigo de la C.A.
 #'   \item NombreCCAA: Nombre de la C.A.
-#'   \item geometry: Lindes de la provincia
+#'   \item geometry: Lindes municipales
 #'   }
 #'
 #' @examples
@@ -212,7 +273,7 @@
 #'   \item NombreProv: Nombre de la provincia
 #'   \item INECodCCAA: Codigo de la C.A.
 #'   \item NombreCCAA: Nombre de la C.A.
-#'   \item geometry: Lindes de la provincia
+#'   \item geometry: Lindes municipales
 #'   }
 #'
 #' @examples
@@ -240,7 +301,7 @@
 #'   \item NombreProv: Nombre de la provincia
 #'   \item INECodCCAA: Codigo de la C.A.
 #'   \item NombreCCAA: Nombre de la C.A.
-#'   \item geometry: Lindes de la provincia
+#'   \item geometry: Lindes municipales
 #'   }
 #'
 #' @examples
@@ -269,7 +330,7 @@
 #'   \item NombreProv: Nombre de la provincia
 #'   \item INECodCCAA: Codigo de la C.A.
 #'   \item NombreCCAA: Nombre de la C.A.
-#'   \item geometry: Lindes de la provincia
+#'   \item geometry: Lindes municipales
 #'   }
 #'
 #' @examples
@@ -296,7 +357,7 @@
 #'   \item NombreProv: Nombre de la provincia
 #'   \item INECodCCAA: Codigo de la C.A.
 #'   \item NombreCCAA: Nombre de la C.A.
-#'   \item geometry: Lindes de la provincia
+#'   \item geometry: Lindes municipales
 #'   }
 #'
 #' @examples
@@ -323,7 +384,7 @@
 #'   \item NombreProv: Nombre de la provincia
 #'   \item INECodCCAA: Codigo de la C.A.
 #'   \item NombreCCAA: Nombre de la C.A.
-#'   \item geometry: Lindes de la provincia
+#'   \item geometry: Lindes municipales
 #'   }
 #'
 #' @examples
@@ -352,7 +413,7 @@
 #'   \item NombreProv: Nombre de la provincia
 #'   \item INECodCCAA: Codigo de la C.A.
 #'   \item NombreCCAA: Nombre de la C.A.
-#'   \item geometry: Lindes de la provincia
+#'   \item geometry: Lindes municipales
 #'   }
 #'
 #' @examples
@@ -380,7 +441,7 @@
 #'   \item NombreProv: Nombre de la provincia
 #'   \item INECodCCAA: Codigo de la C.A.
 #'   \item NombreCCAA: Nombre de la C.A.
-#'   \item geometry: Lindes de la provincia
+#'   \item geometry: Lindes municipales
 #'   }
 #'
 #' @examples
@@ -408,7 +469,7 @@
 #'   \item NombreProv: Nombre de la provincia
 #'   \item INECodCCAA: Codigo de la C.A.
 #'   \item NombreCCAA: Nombre de la C.A.
-#'   \item geometry: Lindes de la provincia
+#'   \item geometry: Lindes municipales
 #'   }
 #'
 #' @examples
@@ -436,7 +497,7 @@
 #'   \item NombreProv: Nombre de la provincia
 #'   \item INECodCCAA: Codigo de la C.A.
 #'   \item NombreCCAA: Nombre de la C.A.
-#'   \item geometry: Lindes de la provincia
+#'   \item geometry: Lindes municipales
 #'   }
 #'
 #' @examples
@@ -464,7 +525,7 @@
 #'   \item NombreProv: Nombre de la provincia
 #'   \item INECodCCAA: Codigo de la C.A.
 #'   \item NombreCCAA: Nombre de la C.A.
-#'   \item geometry: Lindes de la provincia
+#'   \item geometry: Lindes municipales
 #'   }
 #'
 #' @examples
@@ -494,7 +555,7 @@
 #'   \item NombreProv: Nombre de la provincia
 #'   \item INECodCCAA: Codigo de la C.A.
 #'   \item NombreCCAA: Nombre de la C.A.
-#'   \item geometry: Lindes de la provincia
+#'   \item geometry: Lindes municipales
 #'   }
 #'
 #' @examples
@@ -523,7 +584,7 @@
 #'   \item NombreProv: Nombre de la provincia
 #'   \item INECodCCAA: Codigo de la C.A.
 #'   \item NombreCCAA: Nombre de la C.A.
-#'   \item geometry: Lindes de la provincia
+#'   \item geometry: Lindes municipales
 #'   }
 #'
 #' @examples

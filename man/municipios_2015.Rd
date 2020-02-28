@@ -12,7 +12,7 @@
 \item NombreProv: Nombre de la provincia
 \item INECodCCAA: Codigo de la C.A.
 \item NombreCCAA: Nombre de la C.A.
-\item geometry: Lindes de la provincia
+\item geometry: Lindes municipales
 }}
 \source{
 \url{http://centrodedescargas.cnig.es/CentroDescargas/index.jsp}

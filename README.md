@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# LAU2boundaries4spain <img src="hex-sticker.png" align="right" width="200" height="225" />
+# LAU2boundaries4spain <img src="man/figures/hex-sticker.png" align="right" width="200" height="225" />
 
 El objetivo de este repo es facilitar la realización de mapas a nivel
 municipal para España. Para ello se ofrecen las geometrías o contornos
@@ -13,7 +13,7 @@ guarda un registro históricos de las lineas límites municipales; solo
 ofrece la información más actual. Por lo tanto, si se quiere representar
 gráficamente, por ejemplo la población municipal en el año 2010, los
 contornos ofrecidos por el IGN no cuadrarían con la información
-estadistica del INE referida a 2010. La razón es que la relación de
+estadística del INE referida a 2010. La razón es que la relación de
 municipios puede cambiar con el tiempo; por ejemplo, [en el año 2018 se
 crearon en España 7 nuevos
 municipios](https://www.ine.es/daco/daco42/codmun/codmun19/19codmunmod.htm)
@@ -105,7 +105,7 @@ plot(Provincias, max.plot = 1)
 
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
 
-  - Municipios de Teruel en 2002 y 2020
+  - Municipios de Teruel en 2017
 
 <!-- end list -->
 

@@ -4,7 +4,9 @@ editor_options:
   chunk_output_type: console
 ---
 
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
@@ -15,12 +17,61 @@ knitr::opts_chunk$set(
 )
 ```
 
-# LAU2boundaries4spain <img src="man/figures/hex-sticker.png" align="right" width="200" height="225" />
+# LAU2boundaries4spain    <img src="man/figures/hex-sticker.png" align="right" width="185" height="200" />    
 
 
-El objetivo de este repo es facilitar la realización de mapas a nivel municipal para España. Para ello se ofrecen las geometrías o contornos municipales españoles para los años 2002 a 2020. ¿Es necesaria esta información? Evidentemente pensamos que sí. En España el encargado de ofrecer está información es el [Instituto Geográfico Nacional](http://www.ign.es/web/ign/portal) (IGN), **PERO** el IGN no guarda un registro históricos de las lineas límites municipales. Solo ofrece la información más actual. Por lo tanto, si se quisiera representar gráficamente, por ejemplo, la población municipal en el año 2010, ocurriría que los contornos ofrecidos por el IGN no cuadrarían con la información estadística del INE referida a 2010. La razón es que la relación de municipios puede cambiar con el tiempo; por ejemplo, [en el año 2018 se crearon en España 7 nuevos municipios](https://www.ine.es/daco/daco42/codmun/codmun19/19codmunmod.htm), entre ellos El Palmar de Troya, que surge como una segregación de Utrera.
+**LAU2boundaries4spain** es un paquete de R cuyo objetivo es facilitar la realización de mapas a nivel municipal para España. Para ello se ofrecen las geometrías o contornos municipales españoles para los años 2002 a 2020. 
 
-La página web del paquete `LAU2boundaries4spain` puede visitarse [aquí](https://perezp44.github.io/LAU2boundaries4spain/).
+¿Es necesaria esta información? Evidentemente pensamos que sí. En España el organismo encargado de ofrecer está información es el [Instituto Geográfico Nacional](http://www.ign.es/web/ign/portal)  (IGN), pero el IGN no ofrece un registro histórico de las lineas límite municipales; solo ofrece la información más actual. Por lo tanto, si se quisiera representar gráficamente, por ejemplo, la población o la renta per cápita por municipios en el año 2010, ocurriría que los contornos ofrecidos por el IGN no cuadrarían con la información estadística del INE referida a 2010. La razón es que la relación de municipios puede cambiar con el tiempo; por ejemplo, [en el año 2018 se crearon en España 7 nuevos municipios](https://www.ine.es/daco/daco42/codmun/codmun19/19codmunmod.htm), entre ellos El Palmar de Troya, que surge como una segregación de Utrera.   
+
+Para obtener información detallada de los datos ofrecidos y de su proceso de creación puede visitarse la **página web del proyecto** [aquí](https://perezp44.github.io/LAU2boundaries4spain/) o en las viñetas del paquete [aquí](https://perezp44.github.io/LAU2boundaries4spain/articles/intro-to-lau2boundaries4spain.html) y [aquí](https://perezp44.github.io/LAU2boundaries4spain/articles/detailed-info-lau2boundaries4spain.html).  
+
+
+Durante el periodo 2002-2020 desaparecieron en España 4 municipios ^[Concretamente los municipios de Cerdedo y Cotabade, que se juntaron para crear Cerdedo-Cotobade y los municipios de Cesuras y Oza dos Ríos que acabaron formando Oza-Cesuras] y se crearon 25 municipios nuevos. El listado completo de alteraciones municipales puede consultarse en el INE. Como ejemplo, el siguiente gráfico muestra los 6 municipios nuevos creados en la provincia de Granada durante el periodo 2002-2020.
+
+
+
+```{r, echo = FALSE, message = FALSE, warning =FALSE}
+#- ok Granada se lleva la palma con 6 alteraciones municipales 
+library(LAU2boundaries4spain)
+library(knitr)
+library(here)
+library(tidyverse)
+library(ggrepel)
+library(sf)
+#----------------------------------------
+granada_2020 <- LAU2boundaries4spain::municipios_2020 %>% filter(INECodProv == "18")
+granada_2002 <- LAU2boundaries4spain::municipios_2002 %>% filter(INECodProv == "18")
+granada_2002_df <- LAU2boundaries4spain::municipios_2002 %>% filter(INECodProv == "18")  %>% st_set_geometry(NULL)
+dif_granada <- anti_join(granada_2020, granada_2002_df, by = c("INECodMuni" = "INECodMuni"))  #- los 6 municipios que han cambiado
+Provincias <- Provincias
+Prov_granada <- Provincias %>% filter(INECodProv == "18")
+Prov_limitrofes <- Provincias [st_touches(Provincias, Prov_granada, sparse = FALSE ), ]
+centroides_prov <- st_centroid(Prov_limitrofes)    #- sustituye la geometry por el centroide
+centroides_prov <- cbind(Prov_limitrofes, st_coordinates(st_centroid(Prov_limitrofes$geometry))) #- ahora e
+#- centroides de los municipios q han cambiado en Granada
+centroides_dif <- st_centroid(dif_granada)    #- sustituye la geometry por el centroide
+centroides_dif <- cbind(dif_granada, st_coordinates(st_centroid(dif_granada$geometry))) #- ahora e
+dif_granada_names <- dif_granada %>% st_drop_geometry()
+
+p <- ggplot() +
+     geom_sf(data = Provincias, fill = "antiquewhite", color = "grey", size = 0.2) +
+     geom_sf(data = granada_2002, fill = "antiquewhite", color = "black", size = 0.14) +
+     geom_sf(data = dif_granada, fill = "#E41A1C", color = "black", size = 0.14) +
+     geom_sf(data = Prov_granada, fill = NA, color = "black", size = 0.6) +
+     geom_text(data = centroides_prov, aes(x = X, y = Y, label = NombreProv), color = "grey", check_overlap = TRUE, size = 3) +
+     coord_sf(xlim = c(-4.50, -2.15), ylim = c(36.4, 38.10), expand = FALSE)  +
+     theme(panel.grid.major = element_line(color = gray(.5), linetype = "dashed", size = 0.15), panel.background = element_rect(fill = "azure")) +
+     theme(text = element_text(size = 10), axis.text.x = element_text(size = 5)) +
+     theme(axis.text.y = element_text(size = 5)) +
+     geom_text_repel(data = centroides_dif, aes(x = X, y = Y, label = NombreMuni), force = 18.5, color = "black", size = 2.4, fontface = "bold") +
+     labs(title = "Municipios creados en el periodo 2002-2020", subtitle = "(Provincia de Granada)", x = NULL, y = NULL)
+p
+```
+
+
+Como curiosidad, en 2020 hay en España 8.131 municipios, pero el fichero `municipios_2020` tiene 8212 registros. ¿Cuál es la razón de esta discrepancia entre el número oficial de municipios y los datos del IGN? ¿Se inventa el IGN municipios? Evidentemente no. La razón es que en España existen territorios que no pertenecen a un único municipio, son los llamados **condominios**. Actualmente en los ficheros del IGN existen 81 condominios, la mayoría de estos territorios están en las provincias Burgos y Navarra, siendo el mayor de ellos las Bardenas Reales. [Aquí](https://es.wikipedia.org/wiki/Facer%C3%ADa) puedes ver los territorios comunales, generalmente llamados *Facerías*, en la provincia de Navarra.
+
 
 Como el objetivo último de este repositorio es facilitar la representación gráfica de información estadística a nivel municipal, se facilitan los contornos de los términos municipales españoles ajustados a los municipios existentes a 1 de enero de cada año desde 2002, de forma que cuadren exactamente con el Padrón de dicho año. Los contornos a fecha de 1 de enero de 2002 son consistentes con los existentes en el censo de 2001, con fecha de referencia 1 de noviembre de dicho año. 
 
@@ -28,7 +79,10 @@ Creemos que dicha base de datos es útil por varias razones. El [Instituto Geogr
 
 Este repositorio pretende cubrir esa laguna que, de momento, no ha sido satisfecha por las instituciones oficiales. El repositorio está disponible como un _package_ de _R_ alojado en _Github_: <https://github.com/perezp44/LAU2boundaries4spain>. La información ofrecida ha ido elaborándose durante bastante tiempo a partir de diversos trabajos (Goerlich, Mas, Azagra y Chorén 2006, 2007; Goerlich, Ruiz, Chorén y Albert 2015; Reig, Goerlich y Cantarino 2016).
 
-Información más detallada del proceso seguido para la construcción de los diferentes ficheros de lindes puede encontrase en una de las *vignettes* del *package*, concretamente [aquí](https://htmlpreview.github.io/?https://github.com/perezp44/LAU2boundaries4spain/blob/master/inst/doc/detailed-info-lau2boundaries4spain.html)
+
+Información más detallada del proceso seguido para la construcción de los diferentes ficheros de lindes puede encontrase en las dos *vignettes* del *package*, concretamente [aquí](https://perezp44.github.io/LAU2boundaries4spain/articles/intro-to-lau2boundaries4spain.html) y [aquí](https://perezp44.github.io/LAU2boundaries4spain/articles/detailed-info-lau2boundaries4spain.html)
+
+ 
 
 Datos
 ---------------------
@@ -106,6 +160,7 @@ p1 + p2
 
 
 - Si queremos situar a Canarias cerca de España:
+  
 
 ```{r}
 library(LAU2boundaries4spain)

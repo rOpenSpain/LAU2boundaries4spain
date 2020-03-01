@@ -1,27 +1,55 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# LAU2boundaries4spain <img src="man/figures/hex-sticker.png" align="right" width="200" height="225" />
+# LAU2boundaries4spain <img src="man/figures/hex-sticker.png" align="right" width="185" height="200" />
 
-El objetivo de este repo es facilitar la realización de mapas a nivel
-municipal para España. Para ello se ofrecen las geometrías o contornos
-municipales españoles para los años 2002 a 2020. ¿Es necesaria esta
-información? Evidentemente pensamos que sí. En España el encargado de
-ofrecer está información es el [Instituto Geográfico
-Nacional](http://www.ign.es/web/ign/portal) (IGN), **PERO** el IGN no
-guarda un registro históricos de las lineas límites municipales. Solo
-ofrece la información más actual. Por lo tanto, si se quisiera
-representar gráficamente, por ejemplo, la población municipal en el año
-2010, ocurriría que los contornos ofrecidos por el IGN no cuadrarían con
-la información estadística del INE referida a 2010. La razón es que la
-relación de municipios puede cambiar con el tiempo; por ejemplo, [en el
-año 2018 se crearon en España 7 nuevos
+**LAU2boundaries4spain** es un paquete de R cuyo objetivo es facilitar
+la realización de mapas a nivel municipal para España. Para ello se
+ofrecen las geometrías o contornos municipales españoles para los años
+2002 a 2020.
+
+¿Es necesaria esta información? Evidentemente pensamos que sí. En España
+el organismo encargado de ofrecer está información es el [Instituto
+Geográfico Nacional](http://www.ign.es/web/ign/portal) (IGN), pero el
+IGN no ofrece un registro histórico de las lineas límite municipales;
+solo ofrece la información más actual. Por lo tanto, si se quisiera
+representar gráficamente, por ejemplo, la población o la renta per
+cápita por municipios en el año 2010, ocurriría que los contornos
+ofrecidos por el IGN no cuadrarían con la información estadística del
+INE referida a 2010. La razón es que la relación de municipios puede
+cambiar con el tiempo; por ejemplo, [en el año 2018 se crearon en
+España 7 nuevos
 municipios](https://www.ine.es/daco/daco42/codmun/codmun19/19codmunmod.htm),
 entre ellos El Palmar de Troya, que surge como una segregación de
 Utrera.
 
-La página web del paquete `LAU2boundaries4spain` puede visitarse
-[aquí](https://perezp44.github.io/LAU2boundaries4spain/).
+Para obtener información detallada de los datos ofrecidos y de su
+proceso de creación puede visitarse la **página web del proyecto**
+[aquí](https://perezp44.github.io/LAU2boundaries4spain/) o en las
+viñetas del paquete
+[aquí](https://perezp44.github.io/LAU2boundaries4spain/articles/intro-to-lau2boundaries4spain.html)
+y
+[aquí](https://perezp44.github.io/LAU2boundaries4spain/articles/detailed-info-lau2boundaries4spain.html).
+
+Durante el periodo 2002-2020 desaparecieron en España 4 municipios \[1\]
+y se crearon 25 municipios nuevos. El listado completo de alteraciones
+municipales puede consultarse en el INE. Como ejemplo, el siguiente
+gráfico muestra los 6 municipios nuevos creados en la provincia de
+Granada durante el periodo 2002-2020.
+
+<img src="man/figures/README-unnamed-chunk-1-1.png" width="100%" />
+
+Como curiosidad, en 2020 hay en España 8.131 municipios, pero el fichero
+`municipios_2020` tiene 8212 registros. ¿Cuál es la razón de esta
+discrepancia entre el número oficial de municipios y los datos del IGN?
+¿Se inventa el IGN municipios? Evidentemente no. La razón es que en
+España existen territorios que no pertenecen a un único municipio, son
+los llamados **condominios**. Actualmente en los ficheros del IGN
+existen 81 condominios, la mayoría de estos territorios están en las
+provincias Burgos y Navarra, siendo el mayor de ellos las Bardenas
+Reales. [Aquí](https://es.wikipedia.org/wiki/Facer%C3%ADa) puedes ver
+los territorios comunales, generalmente llamados *Facerías*, en la
+provincia de Navarra.
 
 Como el objetivo último de este repositorio es facilitar la
 representación gráfica de información estadística a nivel municipal, se
@@ -58,9 +86,11 @@ diversos trabajos (Goerlich, Mas, Azagra y Chorén 2006, 2007; Goerlich,
 Ruiz, Chorén y Albert 2015; Reig, Goerlich y Cantarino 2016).
 
 Información más detallada del proceso seguido para la construcción de
-los diferentes ficheros de lindes puede encontrase en una de las
+los diferentes ficheros de lindes puede encontrase en las dos
 *vignettes* del *package*, concretamente
-[aquí](https://htmlpreview.github.io/?https://github.com/perezp44/LAU2boundaries4spain/blob/master/inst/doc/detailed-info-lau2boundaries4spain.html)
+[aquí](https://perezp44.github.io/LAU2boundaries4spain/articles/intro-to-lau2boundaries4spain.html)
+y
+[aquí](https://perezp44.github.io/LAU2boundaries4spain/articles/detailed-info-lau2boundaries4spain.html)
 
 ## Datos
 
@@ -101,12 +131,11 @@ municipios_2017 <- municipios_2017   #- geometrías municipales año 2017 (años
 
 ``` r
 library(sf)
-#> Linking to GEOS 3.6.2, GDAL 2.2.3, PROJ 4.9.3
 Provincias <- Provincias
 plot(Provincias, max.plot = 1)
 ```
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
   - Municipios de Teruel en 2017
 
@@ -139,7 +168,7 @@ p2 <- ggplot(data = Prov_aragon) + geom_sf() +
 p1 + p2
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
 
   - Si queremos situar a Canarias cerca de España:
 
@@ -163,4 +192,8 @@ p2 <- ggplot() + geom_sf(data = peninsula) + geom_sf(data = canarias, fill = "pu
 p1 + p2 
 ```
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+
+1.  Concretamente los municipios de Cerdedo y Cotabade, que se juntaron
+    para crear Cerdedo-Cotobade y los municipios de Cesuras y Oza dos
+    Ríos que acabaron formando Oza-Cesuras

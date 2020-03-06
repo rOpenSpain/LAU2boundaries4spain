@@ -1,7 +1,7 @@
 Package: LAU2boundaries4spain
 Type: Package
 Title: LAU2boundaries4spain provides LAU2 (municipalities) data geometries for Spain for 2002-2020
-Version: 0.1.0
+Version: 1.0.0
 Authors@R: c(
     person("Francisco", "Goerlich", email = "francisco.j.goerlich@uv.es", role = c("aut", "cre")),
     person("Pedro J.", "Perez", email = "pedro.j.perez@uv.es", role = c("aut", "cre"))   

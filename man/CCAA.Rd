@@ -4,12 +4,14 @@
 \name{CCAA}
 \alias{CCAA}
 \title{LINDES del IGN para las CC.AA. (SPAIN)}
-\format{A sf-data frame with 18 rows and 3 variables
+\format{
+A sf-data frame with 18 rows and 3 variables
 \itemize{
 \item INECodCCAA: Codigo de la C.A.
 \item NombreCCAA: Nombre de la C.A.
 \item geometry: Linde de la C.A.
-}}
+}
+}
 \source{
 \url{http://centrodedescargas.cnig.es/CentroDescargas/index.jsp}
 }

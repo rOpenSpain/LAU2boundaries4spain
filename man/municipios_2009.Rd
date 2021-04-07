@@ -4,7 +4,8 @@
 \name{municipios_2009}
 \alias{municipios_2009}
 \title{LINDES-2009 del IGN para los municipios (LAU2-SPAIN)}
-\format{A sf-data frame con  8.196 filas y 7 variables
+\format{
+A sf-data frame con  8.196 filas y 7 variables
 \itemize{
 \item INECodMuni: Codigo INE para el municipio (5 digitos)
 \item NombreMuni: Nombre del municipio (o condominio)
@@ -13,7 +14,8 @@
 \item INECodCCAA: Codigo de la C.A.
 \item NombreCCAA: Nombre de la C.A.
 \item geometry: Lindes municipales
-}}
+}
+}
 \source{
 \url{http://centrodedescargas.cnig.es/CentroDescargas/index.jsp}
 }

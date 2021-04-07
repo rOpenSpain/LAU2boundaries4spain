@@ -34,7 +34,7 @@ El procedimiento por el cual organiza y elabora la información disponible es el
 
 Dado el carácter continuo de la información proporcionada por el CNIG los contornos históricos se reconstruyeron a partir de diversas descargas de la Base de Datos de Líneas de Límite del [Centro de Descargas](http://centrodedescargas.cnig.es/CentroDescargas/index.jsp)[^1], la recopilación de las alteraciones municipales desde 2002[^2] y diversas operaciones simples en el contexto de los Sistemas de Información Geográfica (SIG), como la generalización de polígonos, el combinado o fusionado de capas y la edición de ciertos lindes.
 
-El proceso implica además ciertas manipulaciones para ofrecer capas homogéneas para el periodo 2001 a 2020.
+El proceso implica además ciertas manipulaciones para ofrecer capas homogéneas para el periodo 2001 a 2021.
 
 - Canarias suele distribuirse, aunque no siempre, como una capa separada en sistema de referencia geodésico WGS84, por lo que hubo que transformarlo de sistema de referencia y fusionarlo con el fichero de la península y Baleares[^3].
 
@@ -44,7 +44,7 @@ El proceso implica además ciertas manipulaciones para ofrecer capas homogéneas
 
 - Finalmente, y dado que hasta fechas muy recientes, el IGN no ofrecía polígono para el municipio de Fago, 22106, solo un polígono para dos municipios, Fago, 22106, y Ansó, 22028, por no existir acta de deslinde entre ambos municipios en el Registro Central de Cartografía, hubo que recuperar y editar el polígono de este municipio a partir de bases de datos anteriores. Más recientemente el IGN si incluye a dicho municipio en la Base de Datos de Líneas de Límite, siendo consistente con el recuperado de bases anteriores.
 
-Finalmente, tras estos procesos, se obtuvieron ficheros de contornos municipales, y un registro por recinto --municipio o condominio-- en la tabla de atributos. Los condominios son 84 hasta 2018 y 81 para 2019 y 2020, y los municipios los existentes a fecha de 1 de enero de cada año.
+Finalmente, tras estos procesos, se obtuvieron ficheros de contornos municipales, y un registro por recinto --municipio o condominio-- en la tabla de atributos. Los condominios son 84 hasta 2018 y 81 para 2019, 2021 y 2021, y los municipios los existentes a fecha de 1 de enero de cada año.
 
 ## ¿Qué información se ofrece?
 
@@ -57,7 +57,7 @@ Tal y como se indica abajo se ofrece un fichero de polígonos municipales por a�
 
 * Sistema de referencia geodésico: ETRS89 en coordenadas geográficas, sin proyección.
 
-* Contornos municipales para los años 2002-2020 
+* Contornos municipales para los años 2002-2021
 
 * Contornos municipales para provincias y otra para CCAA (procedente de la descarga más reciente).
 
@@ -96,7 +96,7 @@ Tal y como se indica abajo se ofrece un fichero de polígonos municipales por a�
 * **Reig, E.; Goerlich, F. J. y Cantarino, I. (2016)**: Delimitación de áreas rurales y urbanas a nivel local. Demografía, coberturas del suelo y accesibilidad. Economía y Sociedad. Informe Técnico. Fundación BBVA. Bilbao.
 
 
-[^1]: En concreto se efectuaron descargas en mayo de 2011, febrero de 2013, junio de 2016 y febrero de 2020. El formato original de descarga es shape de ESRI, y el tratamiento de los ficheros se hizo en ArcGIS y R.
+[^1]: En concreto se efectuaron descargas en mayo de 2011, febrero de 2013, junio de 2016 y febrero de 2021. El formato original de descarga es shape de ESRI, y el tratamiento de los ficheros se hizo en ArcGIS y R.
 
 [^2]: Las alteraciones municipales pueden encontrase en el [INE](http://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736177031&menu=ultiDatos&idp=1254734710990) o para todos los censos en Goerlich, Ruiz, Chorén y Albert (2015).
 

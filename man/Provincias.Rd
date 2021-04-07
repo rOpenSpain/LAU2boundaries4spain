@@ -4,14 +4,16 @@
 \name{Provincias}
 \alias{Provincias}
 \title{LINDES del IGN para las provincias (SPAIN)}
-\format{A sf-data frame with 18 rows and 3 variables
+\format{
+A sf-data frame with 18 rows and 3 variables
 \itemize{
 \item INECodProv: Codigo provincial
 \item NombreProv: Nombre de la provincia
 \item INECodCCAA: Codigo de la C.A.
 \item NombreCCAA: Nombre de la C.A.
 \item geometry: Linde de la provincia
-}}
+}
+}
 \source{
 \url{http://centrodedescargas.cnig.es/CentroDescargas/index.jsp}
 }

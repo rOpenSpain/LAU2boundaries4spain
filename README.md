@@ -6,7 +6,7 @@
 **LAU2boundaries4spain** es un paquete de R cuyo objetivo es facilitar
 la realización de mapas a nivel municipal para España. Para ello se
 ofrecen las geometrías o contornos municipales españoles para los años
-2002 a 2020.
+2002 a 2021.
 
 ¿Es necesaria esta información? Evidentemente pensamos que sí. En España
 el organismo encargado de ofrecer está información es el [Instituto
@@ -17,8 +17,8 @@ representar gráficamente, por ejemplo, la población o la renta per
 cápita por municipios en el año 2010, ocurriría que los contornos
 ofrecidos por el IGN no cuadrarían con la información estadística del
 INE referida a 2010. La razón es que la relación de municipios puede
-cambiar con el tiempo; por ejemplo, [en el año 2018 se crearon en
-España 7 nuevos
+cambiar con el tiempo; por ejemplo, [en el año 2018 se crearon en España
+7 nuevos
 municipios](https://www.ine.es/daco/daco42/codmun/codmun19/19codmunmod.htm),
 entre ellos El Palmar de Troya, que surge como una segregación de
 Utrera.
@@ -31,16 +31,16 @@ viñetas del paquete
 y
 [aquí](https://perezp44.github.io/LAU2boundaries4spain/articles/detailed-info-lau2boundaries4spain.html).
 
-Durante el periodo 2002-2020 desaparecieron en España 4 municipios \[1\]
-y se crearon 25 municipios nuevos. El listado completo de alteraciones
+Durante el periodo 2002-2021 desaparecieron en España 4 municipios [1] y
+se crearon 25 municipios nuevos. El listado completo de alteraciones
 municipales puede consultarse en el INE. Como ejemplo, el siguiente
 gráfico muestra los 6 municipios nuevos creados en la provincia de
 Granada durante el periodo 2002-2020.
 
 <img src="man/figures/README-unnamed-chunk-1-1.png" width="100%" />
 
-Como curiosidad, en 2020 hay en España 8.131 municipios, pero el fichero
-`municipios_2020` tiene 8212 registros. ¿Cuál es la razón de esta
+Como curiosidad, en 2021 hay en España 8.131 municipios, pero el fichero
+`municipios_2021` tiene 8212 registros. ¿Cuál es la razón de esta
 discrepancia entre el número oficial de municipios y los datos del IGN?
 ¿Se inventa el IGN municipios? Evidentemente no. La razón es que en
 España existen territorios que no pertenecen a un único municipio, son
@@ -96,10 +96,10 @@ y
 
 El paquete proporciona:
 
-  - un fichero con los lindes de las CC.AA (`CCAA`)
-  - un fichero con los lindes provinciales (`Provincias`)
-  - un fichero con los lindes municipales para cada año del periodo
-    2002-2020 (por ejemplo `municipios_2020`)
+-   un fichero con los lindes de las CC.AA (`CCAA`)
+-   un fichero con los lindes provinciales (`Provincias`)
+-   un fichero con los lindes municipales para cada año del periodo
+    2002-2021 (por ejemplo `municipios_2021`)
 
 Los ficheros se ofrecen en formato `spatial-df` del paquete
 [`sf`](https://cran.r-project.org/web/packages/sf/index.html)
@@ -120,14 +120,12 @@ Para cargar los datos en R:
 library(LAU2boundaries4spain)
 CCAA <- CCAA                         #- geometrías de CC.AA
 Provincias <- Provincias             #- geometrías provinciales
-municipios_2017 <- municipios_2017   #- geometrías municipales año 2017 (años posibles: 2002 - 2020)
+municipios_2017 <- municipios_2017   #- geometrías municipales año 2017 (años posibles: 2002 - 2021)
 ```
 
 ## Algunos ejemplos de uso
 
-  - Un gráfico simple con el método por defecto del paquete `sf`:
-
-<!-- end list -->
+-   Un gráfico simple con el método por defecto del paquete `sf`:
 
 ``` r
 library(sf)
@@ -137,9 +135,7 @@ plot(Provincias, max.plot = 1)
 
 <img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
-  - Municipios de Teruel en 2017
-
-<!-- end list -->
+-   Municipios de Teruel en 2017
 
 ``` r
 library(LAU2boundaries4spain)
@@ -170,9 +166,7 @@ p1 + p2
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
 
-  - Si queremos situar a Canarias cerca de España:
-
-<!-- end list -->
+-   Si queremos situar a Canarias cerca de España:
 
 ``` r
 library(LAU2boundaries4spain)
@@ -194,6 +188,6 @@ p1 + p2
 
 <img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
 
-1.  Concretamente los municipios de Cerdedo y Cotabade, que se juntaron
-    para crear Cerdedo-Cotobade y los municipios de Cesuras y Oza dos
-    Ríos que acabaron formando Oza-Cesuras
+[1] Concretamente los municipios de Cerdedo y Cotabade, que se juntaron
+para crear Cerdedo-Cotobade y los municipios de Cesuras y Oza dos Ríos
+que acabaron formando Oza-Cesuras

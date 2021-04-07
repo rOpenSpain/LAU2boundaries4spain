@@ -45,7 +45,7 @@ p
 library(LAU2boundaries4spain)
 CCAA <- CCAA                         #- geometrías de CC.AA
 Provincias <- Provincias             #- geometrías provinciales
-municipios_2017 <- municipios_2017   #- geometrías municipales año 2017 (años posibles: 2002 - 2020)
+municipios_2017 <- municipios_2017   #- geometrías municipales año 2017 (años posibles: 2002 - 2021)
 
 ## ---- fig.height= 2.8---------------------------------------------------------
 library(sf)

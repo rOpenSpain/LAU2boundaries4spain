@@ -25,11 +25,11 @@ Utrera.
 
 Para obtener información detallada de los datos ofrecidos y de su
 proceso de creación puede visitarse la **página web del proyecto**
-[aquí](https://perezp44.github.io/LAU2boundaries4spain/) o en las
+[aquí](https://ropenspain.github.io/LAU2boundaries4spain/) o en las
 viñetas del paquete
-[aquí](https://perezp44.github.io/LAU2boundaries4spain/articles/intro-to-lau2boundaries4spain.html)
+[aquí](https://ropenspain.github.io/LAU2boundaries4spain/articles/intro-to-lau2boundaries4spain.html)
 y
-[aquí](https://perezp44.github.io/LAU2boundaries4spain/articles/detailed-info-lau2boundaries4spain.html).
+[aquí](https://ropenspain.github.io/LAU2boundaries4spain/articles/detailed-info-lau2boundaries4spain.html).
 
 Durante el periodo 2002-2021 desaparecieron en España 4 municipios [1] y
 se crearon 25 municipios nuevos. El listado completo de alteraciones
@@ -109,7 +109,7 @@ Los ficheros se ofrecen en formato `spatial-df` del paquete
 Para instalar el paquete:
 
 ``` r
-remotes::install_github("perezp44/LAU2boundaries4spain")
+remotes::install_github("rOpenSpain/LAU2boundaries4spain")
 ```
 
 ## Uso

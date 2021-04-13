@@ -88,9 +88,9 @@ Ruiz, Chorén y Albert 2015; Reig, Goerlich y Cantarino 2016).
 Información más detallada del proceso seguido para la construcción de
 los diferentes ficheros de lindes puede encontrase en las dos
 *vignettes* del *package*, concretamente
-[aquí](https://perezp44.github.io/LAU2boundaries4spain/articles/intro-to-lau2boundaries4spain.html)
+[aquí](https://ropenspain.github.io/LAU2boundaries4spain/articles/intro-to-lau2boundaries4spain.html)
 y
-[aquí](https://perezp44.github.io/LAU2boundaries4spain/articles/detailed-info-lau2boundaries4spain.html)
+[aquí](https://ropenspain.github.io/LAU2boundaries4spain/articles/detailed-info-lau2boundaries4spain.html)
 
 ## Datos
 

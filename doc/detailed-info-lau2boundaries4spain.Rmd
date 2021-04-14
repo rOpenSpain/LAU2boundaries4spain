@@ -48,7 +48,7 @@ Finalmente, tras estos procesos, se obtuvieron ficheros de contornos municipales
 
 ## ¿Qué información se ofrece?
 
-La información se ofrece en el formato del paquete [`sf`](https://cran.r-project.org/web/packages/sf/index.html) de _R_ y sistema de referencia geodésico europeo, ETRS89 en coordenadas geográficas, es decir sin proyección.
+La información se ofrece en el formato del paquete [`sf`](https://CRAN.R-project.org/package=sf) de _R_ y sistema de referencia geodésico europeo, ETRS89 en coordenadas geográficas, es decir sin proyección.
 
 Tal y como se indica abajo se ofrece un fichero de polígonos municipales por año, y para Provincias y Comunidades Autónomas (CCAA) solo uno, el correspondiente a la descarga más reciente[^6]. Si lo que se desea es disponer de una capa de Provincias o CCAA que sea plenamente consistente con los municipios de un año concreto para hacer cálculos geográficos se recomienda que dicha layer sea obtenida por generalización del fichero de municipios correspondiente. La razón es que entre descargas se suelen producir alteraciones en los lindes de provincia, CCAA, frontera o de costa, por ejemplo, aunque solo sea por redefinición geométrica. De esta forma se asegura que la información de Provincias y Comunidades Autónomas es totalmente compatible con la de los ficheros de municipios de ese año.
 

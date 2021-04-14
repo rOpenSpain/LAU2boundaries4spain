@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# LAU2boundaries4spain    <img src="man/figures/hex-sticker.png" align="right" width="185" height="200" />    
+# LAU2boundaries4spain    <img src="man/figures/logo.png" align="right" width="120" />     
 
 
 **LAU2boundaries4spain** es un paquete de R cuyo objetivo es facilitar la realización de mapas a nivel municipal para España. Para ello se ofrecen las geometrías o contornos municipales españoles para los años 2002 a 2021. 
@@ -79,7 +79,7 @@ Como el objetivo último de este repositorio es facilitar la representación gr�
 
 Creemos que dicha base de datos es útil por varias razones. El [Instituto Geográfico Nacional](http://www.ign.es/web/ign/portal) (IGN) ofrece, a través del [Centro de Descargas](http://centrodedescargas.cnig.es/CentroDescargas/index.jsp) del Centro Nacional de Información Geográfica, los recintos municipales --también los provinciales y autonómicos-- dentro de la Base de Datos de Líneas de Límite Municipal en la **Información Geográfica de Referencia**, sin embargo estas bases de datos son de actualización continua, de forma que lo que se dispone son los municipios "en el momento actual", y no existe un histórico que puede ser de utilidad por muchas razones. Así pues, hasta donde nosotros conocemos, no se dispone, por ejemplo, de una capa vectorial de los polígonos municipales del año 2006, o de la de los municipios correspondientes al censo de 2001. Esta información es necesaria si queremos combinar la información geográfica con la información estadística municipal histórica procedente, por ejemplo, del [Instituto Nacional de Estadística](http://www.ine.es/) (INE).
 
-Este repositorio pretende cubrir esa laguna que, de momento, no ha sido satisfecha por las instituciones oficiales. El repositorio está disponible como un _package_ de _R_ alojado en _Github_: <https://github.com/perezp44/LAU2boundaries4spain>. La información ofrecida ha ido elaborándose durante bastante tiempo a partir de diversos trabajos (Goerlich, Mas, Azagra y Chorén 2006, 2007; Goerlich, Ruiz, Chorén y Albert 2015; Reig, Goerlich y Cantarino 2016).
+Este repositorio pretende cubrir esa laguna que, de momento, no ha sido satisfecha por las instituciones oficiales. El repositorio está disponible como un _package_ de _R_ alojado en _Github_: <https://github.com/rOpenSpain/LAU2boundaries4spain>. La información ofrecida ha ido elaborándose durante bastante tiempo a partir de diversos trabajos (Goerlich, Mas, Azagra y Chorén 2006, 2007; Goerlich, Ruiz, Chorén y Albert 2015; Reig, Goerlich y Cantarino 2016).
 
 
 Información más detallada del proceso seguido para la construcción de los diferentes ficheros de lindes puede encontrase en las dos *vignettes* del *package*, concretamente [aquí](https://ropenspain.github.io/LAU2boundaries4spain/articles/intro-to-lau2boundaries4spain.html) y [aquí](https://ropenspain.github.io/LAU2boundaries4spain/articles/detailed-info-lau2boundaries4spain.html)
@@ -95,7 +95,7 @@ El paquete proporciona:
 -   un fichero con los lindes provinciales (`Provincias`)
 -   un fichero con los lindes municipales para cada año del periodo 2002-2021 (por ejemplo `municipios_2021`)
 
-Los ficheros se ofrecen en formato `spatial-df` del paquete [`sf`](https://cran.r-project.org/web/packages/sf/index.html)
+Los ficheros se ofrecen en formato `spatial-df` del paquete [`sf`](https://CRAN.R-project.org/package=sf)
 
 Instalación
 -----------

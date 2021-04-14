@@ -91,7 +91,7 @@ El paquete proporciona:
 -   un fichero con los lindes provinciales (`Provincias`)
 -   un fichero con los lindes municipales para cada año del periodo 2002-2021 (por ejemplo `municipios_2021`)
 
-Los ficheros se ofrecen en formato `spatial-df` del paquete [`sf`](https://cran.r-project.org/web/packages/sf/index.html)
+Los ficheros se ofrecen en formato `spatial-df` del paquete [`sf`](https://CRAN.R-project.org/package=sf)
 
 Instalación
 -----------

@@ -6,14 +6,16 @@
 \alias{LAU2boundaries4spain-package}
 \title{LAU2boundaries4spain: LAU2boundaries4spain provides LAU2 (municipalities) data geometries for Spain for 2002-2020}
 \description{
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+
 The spanishLAU2rboundaries package provides LAU2 (municipalities) data geometries for Spain. We provide a file for each year
   for the period 2002-2020. Each year has a rda file in sf format.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/perezp44/LAU2boundaries4spain}
-  \item Report bugs at \url{https://github.com/perezp44/LAU2boundaries4spain/issues}
+  \item \url{https://github.com/rOpenSpain/LAU2boundaries4spain}
+  \item Report bugs at \url{https://github.com/rOpenSpain/LAU2boundaries4spain/issues}
 }
 
 }

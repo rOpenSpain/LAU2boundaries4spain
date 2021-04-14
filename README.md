@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# LAU2boundaries4spain <img src="man/figures/hex-sticker.png" align="right" width="185" height="200" />
+# LAU2boundaries4spain <img src="man/figures/logo.png" align="right" width="120" />
 
 **LAU2boundaries4spain** es un paquete de R cuyo objetivo es facilitar
 la realización de mapas a nivel municipal para España. Para ello se
@@ -80,7 +80,7 @@ ejemplo, del [Instituto Nacional de Estadística](http://www.ine.es/)
 Este repositorio pretende cubrir esa laguna que, de momento, no ha sido
 satisfecha por las instituciones oficiales. El repositorio está
 disponible como un *package* de *R* alojado en *Github*:
-<https://github.com/perezp44/LAU2boundaries4spain>. La información
+<https://github.com/rOpenSpain/LAU2boundaries4spain>. La información
 ofrecida ha ido elaborándose durante bastante tiempo a partir de
 diversos trabajos (Goerlich, Mas, Azagra y Chorén 2006, 2007; Goerlich,
 Ruiz, Chorén y Albert 2015; Reig, Goerlich y Cantarino 2016).
@@ -102,7 +102,7 @@ El paquete proporciona:
     2002-2021 (por ejemplo `municipios_2021`)
 
 Los ficheros se ofrecen en formato `spatial-df` del paquete
-[`sf`](https://cran.r-project.org/web/packages/sf/index.html)
+[`sf`](https://CRAN.R-project.org/package=sf)
 
 ## Instalación
 
@@ -142,6 +142,7 @@ library(LAU2boundaries4spain)
 library(tidyverse)
 library(sf)
 library(patchwork)
+#> Warning: package 'patchwork' was built under R version 4.0.5
   
 CCAA_peninsular <- CCAA %>% filter(!NombreCCAA %in% c("Canarias", "Illes Balears", "Ciudades Autónomas de Ceuta y Melilla"))
 Prov_aragon <- Provincias %>% filter(NombreCCAA == "Aragón")
